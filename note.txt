@@ -1,0 +1,153 @@
+// npm init or  npm init -y 
+// npm install firebase or npm install firebase@lastest
+// npm install express or npm install express@lastest
+
+=> How to use Vite 
+
+1. Install 
+    npm install --save-dev vite
+
+2. Create a new file as vite.config.js
+
+3. Update package.json 
+    "scripts": {
+        "dev":"vite",
+        "build":"vite build"
+    },
+
+**"devDependicies":{
+
+},
+"type":"module"
+
+4. Run Build the app for production 
+    npm run build
+
+5. Run Vite in developement server 
+    npm run dev
+
+
+    import { defineConfig } from 'vite';
+
+export default defineConfig({
+    server:{
+        watch:{
+            usePolling: true
+        }
+    },
+    publicDir:'../public',
+    root: './src',
+    build:{
+        outDir:'../dist', // define the output directory , the output director for to build files 
+    },
+});
+
+-------------------------------------
+
+=> Install Express 
+
+npm install express or npm install express@latest
+
+nodemon server.js
+
+=> import 
+
+import express from 'express';
+
+-------------------------------------
+
+
+=> How to install Tailwind Css
+
+https://tailwindcss.com/
+
+npm install -D tailwindcss postcss autoprefixer
+
+npx tailwindcss init ( this create a tailwind.config.js file into your project )
+-------------------------------------
+
+=> Enable Email/Password Authentication 
+Make suer you have enable Email/Passwordd authentication in your Firebase Console.
+
+2. Add Tailwind to your PostCSS configuration 
+create postcss.config.js manually ( Note: do not forgot to export as ES6 )
+
+export default {
+    plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  }
+}
+
+Add the Tailwind directives to your CSS
+create a css file located to (eg.src/css/main.css) 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+5. include css link to each html file
+<link href="./css/main.css" rel="stylesheet" type="text/css" />
+
+npm run build
+npm run dev
+
+------------------------------------------
+
+Authentication > Sign-in Method 
+Ensure Email/Password is enabled.
+Save the changes 
+
+=> Enable Google Sign-in in Firebase Console 
+
+Authentication > Sign-in Method 
+Enable Google under the list of provider 
+
+Public-facing name for project  =  your firebase project id 
+Support email for project = your firebase gmail address
+Save the changes 
+
+------------------------------------------------------------------------------------ 
+
+=> Customize the Password Reset Email Template 
+you can customize the password reset email link to redirected user to a specific page in your app. 
+
+Authentication > Templates > Password reset > click Edit pen
+
+------------------------------------------------------------------------------------ 
+
+=> Install Date Fns 
+
+1 Install 
+https://date-fns.org/docs/Getting-Started 
+
+npm install date-fns --save
+
+2. import in src/main.js or src/js/uielement.js
+
+import { format } from "date-fns";
+
+const formatteddate = format(new Date(createdtime,"do MMM yyyy"))
+
+------------------------------------------------------------------------------------ 
+=> Install Fontawesome 6
+
+1 Install 
+
+npm install @fortawesome/fontawesome-free
+
+
+2. import in src/main.js or src/js/uielement.js
+
+import "@fortawesome/fontawesome-free/css/all.min.css"
+
+const formatteddate = format(new Date(createdtime,"do MMM yyyy"))
+
+------------------------------------------------------------------------------------ 
+
+=> Deploy on Cloud Server 
+
+1. your project need Repo public to Github
+
+
+

@@ -1,0 +1,1 @@
+import{A as n}from"./authorize-S79aEl4T.js";/* empty css             */const r=document.getElementById("signupform");r.addEventListener("submit",m=>{m.preventDefault();const e=document.getElementById("fullname").value.trim(),t=document.getElementById("email").value.trim(),o=document.getElementById("password").value.trim();console.log(e,t,o),n().registerUser(e,t,o)});
