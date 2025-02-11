@@ -112,7 +112,7 @@ export function Chatroom(room,username){
 
     }
 
-    deleteAllMessages();
+    // deleteAllMessages();
 
     return {addChat,getChats,updateChatroom,updateUsername};
 
